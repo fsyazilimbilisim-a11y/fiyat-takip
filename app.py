@@ -139,7 +139,13 @@ async def get_sitemap():
 
 @app.get("/google{code}.html")
 async def google_verification(code: str):
-    return PlainTextResponse(f"google-site-verification: google{code}.html")
+    filename = f"google{code}.html"
+    filepath = os.path.join(BASE_DIR, filename)
+    if os.path.exists(filepath):
+        with open(filepath, "r", encoding="utf-8") as f:
+            return PlainTextResponse(f.read().strip())
+    raise HTTPException(status_code=404, detail="Doğrulama dosyası bulunamadı")
+
 
 
 

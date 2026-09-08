@@ -1,0 +1,46 @@
+/* Akakçe Fiyat Takip Özel Stilleri */
+
+/* Kaydırma çubuğu */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Kart hover yumuşak geçişleri */
+.product-card {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 12px 24px -10px rgba(16, 185, 129, 0.15);
+}
+
+/* Yanıp sönen eşik uyarısı */
+@keyframes alertPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+  }
+}
+
+.threshold-alert-active {
+  animation: alertPulse 2s infinite;
+  border-color: rgba(239, 68, 68, 0.8) !important;
+}

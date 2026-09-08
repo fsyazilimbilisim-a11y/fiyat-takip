@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F&S Yazılım Bilişim • Akıllı Fiyat Takip & Alarm Sistemi</title>
+  <meta name="description" content="F&S Yazılım Bilişim resmi Akakçe Akıllı Fiyat Takip ve Eşik Alarm Sistemi. En ucuz satıcılar, 1 yıllık fiyat geçmişi ve canlı donanım piyasası analizleri.">
+  <meta name="keywords" content="F&S Yazılım Bilişim, Akıllı Fiyat Takip, Akakçe Fiyat Takipçisi, Donanım İndirimleri, F&S Bilişim, Fiyat Alarmı">
+  <meta name="author" content="F&S Yazılım Bilişim">
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="Pd9pLOAm10bPY36RlA9FK0WRJppeoXcZlgCDjZt5zwY" />
+  
+  <!-- Open Graph / Sosyal Medya & Google Paylaşım Etiketleri -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="F&S Yazılım Bilişim • Akıllı Fiyat Takip & Alarm Sistemi">
+  <meta property="og:description" content="Akakçe üzerindeki donanım, oyuncak, bisiklet ve teknoloji ürünleri için anlık fiyat takibi, 1 yıllık değişim grafikleri ve en ucuz 3 satıcı karşılaştırması.">
+  <meta property="og:image" content="/static/logo.png">
+  <meta property="og:site_name" content="F&S Yazılım Bilişim">
+  <link rel="canonical" href="https://fsyazilimbilisim.com/">
+
+  <!-- Schema.org JSON-LD Google Yapısal Veri (Google AI & Knowledge Graph) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "F&S Yazılım Bilişim • Akıllı Fiyat Takip & Alarm Sistemi",
+    "applicationCategory": "ShoppingApplication",
+    "operatingSystem": "All",
+    "url": "https://fsyazilimbilisim.com",
+    "author": {
+      "@type": "Organization",
+      "name": "F&S Yazılım Bilişim",
+      "founder": "Süleyman Öner",
+      "url": "https://fsyazilimbilisim.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bağcılar Mah. Çevlik Cd. No:24/A",
+        "addressLocality": "Bağlar",
+        "addressRegion": "Diyarbakır",
+        "addressCountry": "TR"
+      }
+    },
+    "description": "F&S Yazılım Bilişim resmi Akakçe Akıllı Fiyat Takip ve Eşik Alarm Sistemi. En ucuz 3 satıcı, 1 yıllık fiyat geçmişi, %20+ indirimli fırsatlar ve piyasa analizleri."
+  }
+  </script>
+
+  <link rel="icon" type="image/png" href="/static/logo.png">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="/static/style.css?v=2.7.0">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans antialiased selection:bg-emerald-500 selection:text-white">
+
+  <!-- Üst Başlık & Gezinme -->
+  <header class="border-b border-slate-800/80 bg-slate-900/60 backdrop-blur-xl sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3 sm:space-x-4">
+        <div class="bg-white/95 hover:bg-white transition px-2.5 py-1.5 rounded-xl shadow-md shadow-orange-500/10 flex items-center border border-slate-700/60">
+          <img src="/static/logo.png?v=2.6.0" alt="F&S Yazılım Bilişim" class="h-8 w-auto object-contain">
+        </div>
+        <div>
+          <div class="flex items-center space-x-2">
+            <h1 class="font-bold text-base sm:text-lg tracking-tight bg-gradient-to-r from-white via-slate-200 to-emerald-400 bg-clip-text text-transparent">
+              Akakçe Fiyat Takipçisi
+            </h1>
+            <span class="px-2 py-0.5 text-[11px] sm:text-xs font-semibold rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+              Canlı Takip
+            </span>
+          </div>
+          <p class="text-xs text-slate-400">F&S Yazılım Bilişim • Akıllı Fiyat Takip & Alarm Sistemi</p>
+        </div>
+      </div>
+
+      <!-- Aksiyon Butonları -->
+      <div class="flex items-center space-x-2 sm:space-x-3">
+        <button id="btnCheckNow" onclick="triggerCheckNow()" class="inline-flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-medium px-3 sm:px-4 py-2 rounded-xl transition duration-150 shadow-md shadow-emerald-600/20 active:scale-95">
+          <i data-lucide="refresh-cw" class="w-4 h-4" id="checkIcon"></i>
+          <span>Şimdi Kontrol Et</span>
+        </button>
+
+        <button onclick="triggerDailyReportSim()" class="inline-flex items-center space-x-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs sm:text-sm font-medium px-3 sm:px-4 py-2 rounded-xl border border-slate-700 transition active:scale-95" title="Saat 10:00 Günlük Raporunu Simüle Et">
+          <i data-lucide="file-text" class="w-4 h-4 text-emerald-400"></i>
+          <span class="hidden md:inline">10:00 Raporu Simüle Et</span>
+        </button>
+
+        <button onclick="openSettingsModal()" class="inline-flex items-center space-x-2 bg-slate-800 hover:bg-slate-700 text-slate-200 p-2 sm:px-3 sm:py-2 rounded-xl border border-slate-700 transition" title="Ayarlar">
+          <i data-lucide="settings" class="w-4 h-4 text-slate-300"></i>
+          <span class="hidden sm:inline text-xs sm:text-sm">Ayarlar</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Ana İçerik -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+
+    <!-- Sistem Durum Şeridi -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div class="bg-slate-900/50 border border-slate-800/80 rounded-2xl p-4 flex items-center space-x-4">
+        <div class="p-3 bg-emerald-500/10 rounded-xl text-emerald-400 border border-emerald-500/20">
+          <i data-lucide="clock" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <p class="text-xs text-slate-400 font-medium">Zamanlanmış Görev</p>
+          <p class="text-sm font-semibold text-slate-200" id="statReportTime">Her gün saat 10:00</p>
+          <p class="text-[11px] text-emerald-400 flex items-center mt-0.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse mr-1.5"></span>
+            Zamanlayıcı Aktif
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-slate-900/50 border border-slate-800/80 rounded-2xl p-4 flex items-center space-x-4">
+        <div class="p-3 bg-cyan-500/10 rounded-xl text-cyan-400 border border-cyan-500/20">
+          <i data-lucide="bell-ring" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <p class="text-xs text-slate-400 font-medium">Fiyat Eşiği Alarmı</p>
+          <p class="text-sm font-semibold text-slate-200" id="statThresholdStatus">Koşullu Takip Devrede</p>
+          <p class="text-[11px] text-slate-400 mt-0.5" id="statInterval">Her 60 dk kontrol</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-900/50 border border-slate-800/80 rounded-2xl p-4 flex items-center space-x-4">
+        <div class="p-3 bg-purple-500/10 rounded-xl text-purple-400 border border-purple-500/20">
+          <i data-lucide="hard-drive" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <p class="text-xs text-slate-400 font-medium">Takip Edilen Modeller</p>
+          <p class="text-sm font-semibold text-slate-200" id="statProductCount">3 Kapasite</p>
+          <p class="text-[11px] text-purple-400 mt-0.5">Tüm Aktif Modeller</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-900/50 border border-slate-800/80 rounded-2xl p-4 flex items-center space-x-4">
+        <div class="p-3 bg-amber-500/10 rounded-xl text-amber-400 border border-amber-500/20">
+          <i data-lucide="send" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <p class="text-xs text-slate-400 font-medium">Bildirim Kanalları</p>
+          <p class="text-sm font-semibold text-slate-200" id="statNotifChannels">Windows Masaüstü</p>
+          <p class="text-[11px] text-emerald-400 mt-0.5 flex items-center">
+            <i data-lucide="check" class="w-3 h-3 mr-1"></i> Sesli & Tıklanabilir
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ürün Kartları Bölümü -->
+    <div>
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 class="text-lg font-bold text-slate-100 flex items-center space-x-2">
+            <span>Takip Listesi & Anlık Durum</span>
+          </h2>
+          <p class="text-xs text-slate-400">Akakçe üzerinden taranan güncel fiyatlar ve alarm eşikleri</p>
+        </div>
+        <button onclick="openAddProductModal()" class="text-xs font-medium text-emerald-400 hover:text-emerald-300 flex items-center space-x-1 bg-emerald-500/10 hover:bg-emerald-500/20 px-3 py-1.5 rounded-lg border border-emerald-500/20 transition">
+          <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+          <span>Yeni Ürün / Model Ekle</span>
+        </button>
+      </div>
+
+      <!-- Kategori Filtre Butonları -->
+      <div class="flex flex-wrap items-center gap-2 mb-4" id="categoryFilterContainer">
+        <button onclick="filterProductsByCategory('all')" id="catBtn_all" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-emerald-600 text-white shadow-sm transition flex items-center space-x-1.5">
+          <span>Tüm Ürünler</span>
+          <span id="catCount_all" class="px-1.5 py-0.5 rounded-full bg-white/20 text-[10px]">22</span>
+        </button>
+        <button onclick="filterProductsByCategory('deals_20')" id="catBtn_deals" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-gradient-to-r from-amber-500/20 via-orange-500/20 to-rose-500/20 hover:from-amber-500/30 hover:to-rose-500/30 text-amber-300 border border-amber-500/40 transition shadow-sm flex items-center space-x-1.5">
+          <span>🔥 %20+ İndirimdekiler</span>
+          <span id="catCount_deals" class="px-1.5 py-0.5 rounded-full bg-amber-500/30 text-[10px] font-black">14</span>
+        </button>
+        <button onclick="filterProductsByCategory('Oyuncak & Hobi')" id="catBtn_TOY" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition flex items-center space-x-1.5">
+          <span>🧸 Oyuncak & Hobi</span>
+          <span id="catCount_TOY" class="px-1.5 py-0.5 rounded-full bg-slate-700 text-[10px]">3</span>
+        </button>
+        <button onclick="filterProductsByCategory('Bisiklet & Spor')" id="catBtn_BIKE" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition flex items-center space-x-1.5">
+          <span>🚲 Bisiklet & Spor</span>
+          <span id="catCount_BIKE" class="px-1.5 py-0.5 rounded-full bg-slate-700 text-[10px]">3</span>
+        </button>
+        <button onclick="filterProductsByCategory('RAM & Bellek')" id="catBtn_RAM" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition flex items-center space-x-1.5">
+          <span>⚡ RAM & Bellek</span>
+          <span id="catCount_RAM" class="px-1.5 py-0.5 rounded-full bg-slate-700 text-[10px]">2</span>
+        </button>
+        <button onclick="filterProductsByCategory('Bilgisayar & Laptop')" id="catBtn_PC" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition flex items-center space-x-1.5">
+          <span>💻 Bilgisayar & Laptop</span>
+          <span id="catCount_PC" class="px-1.5 py-0.5 rounded-full bg-slate-700 text-[10px]">3</span>
+        </button>
+        <button onclick="filterProductsByCategory('SSD & Depolama')" id="catBtn_SSD" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition flex items-center space-x-1.5">
+          <span>💾 SSD & Depolama</span>
+          <span id="catCount_SSD" class="px-1.5 py-0.5 rounded-full bg-slate-700 text-[10px]">7</span>
+        </button>
+        <button onclick="filterProductsByCategory('İşlemci & Anakart')" id="catBtn_CPU" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition flex items-center space-x-1.5">
+          <span>⚡ İşlemci & Anakart</span>
+          <span id="catCount_CPU" class="px-1.5 py-0.5 rounded-full bg-slate-700 text-[10px]">2</span>
+        </button>
+        <button onclick="filterProductsByCategory('Çevre Birimleri')" id="catBtn_ACC" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition flex items-center space-x-1.5">
+          <span>🎧 Çevre Birimleri</span>
+          <span id="catCount_ACC" class="px-1.5 py-0.5 rounded-full bg-slate-700 text-[10px]">2</span>
+        </button>
+      </div>
+
+      <div id="productCardsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Kartlar JS ile dinamik doldurulacak -->
+        <div class="col-span-full py-12 text-center text-slate-400">
+          <i data-lucide="loader-2" class="w-8 h-8 animate-spin mx-auto text-emerald-500 mb-2"></i>
+          Veriler yükleniyor...
+        </div>
+      </div>
+    </div>
+
+    <!-- Grafik ve 1 Yıllık Analiz Bölümü -->
+    <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 shadow-xl space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <div class="flex items-center space-x-2">
+            <div class="p-2 bg-emerald-500/10 rounded-lg text-emerald-400">
+              <i data-lucide="history" class="w-5 h-5"></i>
+            </div>
+            <h2 class="text-base font-bold text-slate-100">
+              Fiyat Değişim Analizi & Geçmiş Grafiği
+            </h2>
+          </div>
+          <p class="text-xs text-slate-400 mt-1" id="chartSubtitle">Seçilen modelin son 1 yılda ne kadar düştüğünü veya yükseldiğini gösteren analiz</p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2">
+          <!-- Akakçe Dönem Seçimi -->
+          <div class="inline-flex rounded-xl bg-slate-800/80 p-1 border border-slate-700/60 text-xs">
+            <button id="chartPeriod1yBtn" onclick="switchMainChartPeriod('1yil')" class="px-3 py-1 rounded-lg font-semibold bg-emerald-600 text-white shadow transition">
+              1 Yıl
+            </button>
+            <button id="chartPeriod6mBtn" onclick="switchMainChartPeriod('6ay')" class="px-3 py-1 rounded-lg font-medium text-slate-400 hover:text-slate-200 transition">
+              6 Ay
+            </button>
+            <button id="chartPeriod1mBtn" onclick="switchMainChartPeriod('1ay')" class="px-3 py-1 rounded-lg font-medium text-slate-400 hover:text-slate-200 transition">
+              1 Ay
+            </button>
+          </div>
+
+          <!-- Model Seçimi -->
+          <div class="flex items-center space-x-1.5">
+            <select id="chartProductSelect" onchange="changeChartProduct(this.value)" class="bg-slate-800 border border-slate-700 text-xs rounded-xl px-3 py-1.5 text-slate-200 focus:outline-none focus:border-emerald-500">
+              <!-- JS ile doldurulacak -->
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Son 1 Yıl Değişim ve İstatistik Kartları -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="stats1yContainer">
+        <!-- 1. En Düşük Fiyat -->
+        <div class="bg-slate-800/40 border border-slate-800 rounded-xl p-3.5 space-y-1">
+          <div class="flex items-center justify-between">
+            <span class="text-[11px] text-slate-400 font-medium">Son 1 Yılın En Düşüğü</span>
+            <span class="p-1 bg-emerald-500/10 text-emerald-400 rounded-md">
+              <i data-lucide="trending-down" class="w-3.5 h-3.5"></i>
+            </span>
+          </div>
+          <p class="text-lg font-bold text-emerald-400" id="stat1yMinPrice">-</p>
+          <p class="text-[10px] text-slate-500" id="stat1yMinDate">Tarih: -</p>
+          <p class="text-[11px] font-semibold text-emerald-300/90 pt-1 border-t border-slate-800/80" id="stat1yRise">-</p>
+        </div>
+
+        <!-- 2. En Yüksek Fiyat -->
+        <div class="bg-slate-800/40 border border-slate-800 rounded-xl p-3.5 space-y-1">
+          <div class="flex items-center justify-between">
+            <span class="text-[11px] text-slate-400 font-medium">Son 1 Yılın En Yükseği</span>
+            <span class="p-1 bg-rose-500/10 text-rose-400 rounded-md">
+              <i data-lucide="trending-up" class="w-3.5 h-3.5"></i>
+            </span>
+          </div>
+          <p class="text-lg font-bold text-rose-400" id="stat1yMaxPrice">-</p>
+          <p class="text-[10px] text-slate-500" id="stat1yMaxDate">Tarih: -</p>
+          <p class="text-[11px] font-semibold text-rose-300/90 pt-1 border-t border-slate-800/80" id="stat1yDrop">-</p>
+        </div>
+
+        <!-- 3. Net Değişim (1 Yıllık) -->
+        <div class="bg-slate-800/40 border border-slate-800 rounded-xl p-3.5 space-y-1">
+          <div class="flex items-center justify-between">
+            <span class="text-[11px] text-slate-400 font-medium">1 Yıllık Net Değişim</span>
+            <span class="p-1 bg-cyan-500/10 text-cyan-400 rounded-md">
+              <i data-lucide="bar-chart-2" class="w-3.5 h-3.5"></i>
+            </span>
+          </div>
+          <p class="text-lg font-bold text-slate-200" id="stat1yNetChange">-</p>
+          <p class="text-[10px] text-slate-500" id="stat1yOldestDate">Başlangıç: -</p>
+          <p class="text-[11px] text-slate-400 pt-1 border-t border-slate-800/80" id="stat1yNetNote">Akakçe Piyasa Değişimi</p>
+        </div>
+
+        <!-- 4. Alarm Eşiği -->
+        <div class="bg-slate-800/40 border border-slate-800 rounded-xl p-3.5 space-y-1">
+          <div class="flex items-center justify-between">
+            <span class="text-[11px] text-slate-400 font-medium">Fiyat Alarm Eşiğiniz</span>
+            <span class="p-1 bg-amber-500/10 text-amber-400 rounded-md">
+              <i data-lucide="target" class="w-3.5 h-3.5"></i>
+            </span>
+          </div>
+          <p class="text-lg font-bold text-amber-400" id="stat1yThreshold">-</p>
+          <p class="text-[10px] text-slate-500" id="stat1yThresholdHint">Hedef Alış Fiyatı</p>
+          <p class="text-[11px] text-amber-300/90 pt-1 border-t border-slate-800/80" id="stat1yThresholdStatus">-</p>
+        </div>
+      </div>
+
+      <!-- Çizim Alanı -->
+      <div class="h-72 sm:h-96 w-full relative">
+        <canvas id="priceChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Sekmeler: Günlük 10:00 Raporları & Alarm Geçmişi -->
+    <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 shadow-xl">
+      <div class="flex border-b border-slate-800 mb-6">
+        <button id="tabReportsBtn" onclick="switchTab('reports')" class="px-4 py-2.5 font-semibold text-sm border-b-2 border-emerald-500 text-emerald-400 flex items-center space-x-2">
+          <i data-lucide="file-check" class="w-4 h-4"></i>
+          <span>Günlük 10:00 Özet Raporları</span>
+        </button>
+        <button id="tabAlarmsBtn" onclick="switchTab('alarms')" class="px-4 py-2.5 font-semibold text-sm border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center space-x-2">
+          <i data-lucide="bell" class="w-4 h-4"></i>
+          <span>Tetiklenen Alarm Geçmişi</span>
+        </button>
+      </div>
+
+      <!-- Raporlar Sekmesi -->
+      <div id="tabReportsContent" class="space-y-4">
+        <div id="reportsList" class="divide-y divide-slate-800/60">
+          <div class="py-8 text-center text-xs text-slate-400">Raporlar yükleniyor...</div>
+        </div>
+      </div>
+
+      <!-- Alarmlar Sekmesi -->
+      <div id="tabAlarmsContent" class="hidden space-y-4">
+        <div id="alarmsList" class="divide-y divide-slate-800/60">
+          <div class="py-8 text-center text-xs text-slate-400">Alarm kayıtları yükleniyor...</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Eşik Değiştirme Modalı -->
+  <div id="thresholdModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-md w-full p-6 shadow-2xl space-y-5">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+          <div class="p-2 bg-emerald-500/10 text-emerald-400 rounded-lg">
+            <i data-lucide="target" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-base text-slate-100">Fiyat Alarmı Eşiği Belirle</h3>
+        </div>
+        <button onclick="closeThresholdModal()" class="text-slate-400 hover:text-slate-200">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <p class="text-xs text-slate-400">
+        Bu modelin Akakçe fiyatı belirlediğiniz tutarın altına düştüğünde anında doğrudan satıcı linki ile bildirim alacaksınız.
+      </p>
+
+      <div class="space-y-3">
+        <input type="hidden" id="modalProductId">
+        <div>
+          <label class="block text-xs font-medium text-slate-300 mb-1">Ürün</label>
+          <input type="text" id="modalProductName" readonly class="w-full bg-slate-800/50 border border-slate-700/60 rounded-xl px-3 py-2 text-xs text-slate-400">
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-slate-300 mb-1">Hedef Eşik Tutar (TL)</label>
+          <div class="relative">
+            <input type="number" id="modalThresholdInput" step="10" placeholder="Örn: 3500" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2.5 text-sm text-white font-semibold focus:outline-none focus:border-emerald-500">
+            <span class="absolute right-3 top-2.5 text-xs text-slate-400 font-bold">TL</span>
+          </div>
+          <p class="text-[11px] text-slate-500 mt-1">Örn: 3500 TL yazdığınızda, fiyat 3.500 TL veya altına indiğinde hemen alarm çalar.</p>
+        </div>
+      </div>
+
+      <div class="flex justify-end space-x-3 pt-2">
+        <button onclick="closeThresholdModal()" class="px-4 py-2 text-xs font-medium text-slate-400 hover:text-slate-200">İptal</button>
+        <button onclick="saveThresholdModal()" class="px-4 py-2 text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl shadow-lg shadow-emerald-600/20">Kaydet</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ayarlar Modalı -->
+  <div id="settingsModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-xl w-full p-6 shadow-2xl space-y-5 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+          <div class="p-2 bg-slate-800 text-slate-300 rounded-lg">
+            <i data-lucide="sliders" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-base text-slate-100">Uygulama & Bildirim Ayarları</h3>
+        </div>
+        <button onclick="closeSettingsModal()" class="text-slate-400 hover:text-slate-200">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Ayar Formu -->
+      <div class="space-y-4">
+        <!-- Zamanlama -->
+        <div class="p-4 bg-slate-800/40 rounded-xl border border-slate-800 space-y-3">
+          <h4 class="text-xs font-bold text-emerald-400 uppercase tracking-wider flex items-center">
+            <i data-lucide="clock" class="w-3.5 h-3.5 mr-1.5"></i> Zamanlanmış Görev Ayarları
+          </h4>
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs text-slate-300 mb-1">Günlük Rapor Saati</label>
+              <input type="text" id="settingDailyTime" value="10:00" placeholder="10:00" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-white">
+              <span class="text-[10px] text-slate-500">Her gün saat 10:00 raporu</span>
+            </div>
+            <div>
+              <label class="block text-xs text-slate-300 mb-1">Eşik Kontrol Sıklığı (Dk)</label>
+              <input type="number" id="settingInterval" value="60" min="5" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-white">
+              <span class="text-[10px] text-slate-500">Dakika cinsinden periyot</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bildirim Kanalları -->
+        <div class="p-4 bg-slate-800/40 rounded-xl border border-slate-800 space-y-4">
+          <h4 class="text-xs font-bold text-emerald-400 uppercase tracking-wider flex items-center">
+            <i data-lucide="bell" class="w-3.5 h-3.5 mr-1.5"></i> Bildirim Kanalları
+          </h4>
+
+          <!-- Windows Toast -->
+          <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+            <div>
+              <p class="text-xs font-semibold text-slate-200">Windows Masaüstü Bildirimi</p>
+              <p class="text-[11px] text-slate-400">Windows 10/11 ekranda sesli ve tıklanabilir Toast uyarısı</p>
+            </div>
+            <div class="flex items-center space-x-2">
+              <button onclick="testNotificationChannel('desktop')" class="px-2.5 py-1 text-[11px] bg-slate-800 hover:bg-slate-700 text-slate-300 rounded border border-slate-700">Test Et</button>
+              <input type="checkbox" id="settingDesktopNotif" checked class="w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500">
+            </div>
+          </div>
+
+          <!-- Telegram Bot -->
+          <div class="space-y-2 pb-3 border-b border-slate-800">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-xs font-semibold text-slate-200">Telegram Bildirimi</p>
+                <p class="text-[11px] text-slate-400">Cebinize anlık Telegram mesajı ve satıcı butonu</p>
+              </div>
+              <div class="flex items-center space-x-2">
+                <button onclick="testNotificationChannel('telegram')" class="px-2.5 py-1 text-[11px] bg-slate-800 hover:bg-slate-700 text-slate-300 rounded border border-slate-700">Test Et</button>
+                <input type="checkbox" id="settingTelegramNotif" class="w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500">
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-2 pt-1">
+              <input type="text" id="settingTelegramToken" placeholder="Bot Token (örn: 123456:ABC...)" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-2.5 py-1 text-[11px] text-white">
+              <input type="text" id="settingTelegramChatId" placeholder="Chat ID (örn: 98765432)" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-2.5 py-1 text-[11px] text-white">
+            </div>
+          </div>
+
+          <!-- Discord Webhook -->
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-xs font-semibold text-slate-200">Discord Webhook</p>
+                <p class="text-[11px] text-slate-400">Discord kanalınıza şık gömülü kart uyarısı</p>
+              </div>
+              <div class="flex items-center space-x-2">
+                <button onclick="testNotificationChannel('discord')" class="px-2.5 py-1 text-[11px] bg-slate-800 hover:bg-slate-700 text-slate-300 rounded border border-slate-700">Test Et</button>
+                <input type="checkbox" id="settingDiscordNotif" class="w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500">
+              </div>
+            </div>
+            <input type="text" id="settingDiscordUrl" placeholder="Discord Webhook URL (https://discord.com/api/webhooks/...)" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-2.5 py-1 text-[11px] text-white">
+          </div>
+        </div>
+
+        <!-- Windows Görev Zamanlayıcısı İpuçları -->
+        <div class="p-3 bg-emerald-500/5 rounded-xl border border-emerald-500/20 text-[11px] text-slate-300">
+          <p class="font-semibold text-emerald-400 mb-1 flex items-center">
+            <i data-lucide="info" class="w-3.5 h-3.5 mr-1"></i> Windows Görev Zamanlayıcısı:
+          </p>
+          Bilgisayarınız açıldığında her gün saat 10:00'da programın arkada otomatik çalışması için klasördeki <code>kur_gorev_zamanlayici.bat</code> dosyasını tek tıklamayla çalıştırabilirsiniz.
+        </div>
+      </div>
+
+      <div class="flex justify-end space-x-3 pt-2">
+        <button onclick="closeSettingsModal()" class="px-4 py-2 text-xs font-medium text-slate-400 hover:text-slate-200">Kapat</button>
+        <button onclick="saveSettingsModal()" class="px-4 py-2 text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl shadow-lg shadow-emerald-600/20">Kaydet</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Yeni Ürün Ekleme Modalı -->
+  <div id="addProductModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-md w-full p-6 shadow-2xl space-y-4">
+      <div class="flex items-center justify-between">
+        <h3 class="font-bold text-base text-slate-100 flex items-center space-x-2">
+          <i data-lucide="plus-circle" class="w-5 h-5 text-emerald-400"></i>
+          <span>Yeni Akakçe Ürünü Ekle</span>
+        </h3>
+        <button onclick="closeAddProductModal()" class="text-slate-400 hover:text-slate-200">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="space-y-3">
+        <div>
+          <label class="block text-xs font-medium text-slate-300 mb-1">Ürün Adı</label>
+          <input type="text" id="newProdName" placeholder="Örn: AMD Ryzen 5 5600 veya Logitech G102" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white">
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-slate-300 mb-1">Kategori</label>
+          <select id="newProdCategory" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-emerald-500">
+            <option value="SSD & Depolama">SSD & Depolama</option>
+            <option value="İşlemci & Anakart">İşlemci & Anakart</option>
+            <option value="Çevre Birimleri">Çevre Birimleri & Aksesuar</option>
+            <option value="Donanım">Diğer Donanım</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-slate-300 mb-1">Kapasite / Model</label>
+          <input type="text" id="newProdCap" placeholder="Örn: 1TB veya 2TB" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white">
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-slate-300 mb-1">Akakçe Ürün Linki (URL)</label>
+          <input type="url" id="newProdUrl" placeholder="https://www.akakce.com/ssd/..." class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white">
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-slate-300 mb-1">Başlangıç Fiyat Eşiği (TL)</label>
+          <input type="number" id="newProdThreshold" placeholder="3500" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white">
+          <p class="text-[10px] text-emerald-400/90 mt-1 flex items-center">
+            <i data-lucide="image" class="w-3 h-3 mr-1"></i>
+            Orijinal ürün görseli ve en ucuz 3 satıcı Akakçe'den otomatik çekilir.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex justify-end space-x-3 pt-2">
+        <button onclick="closeAddProductModal()" class="px-4 py-2 text-xs font-medium text-slate-400 hover:text-slate-200">Vazgeç</button>
+        <button onclick="submitNewProduct()" class="px-4 py-2 text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl">Ekle ve Tara</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Akakçe Birebir Fiyat Analizi Modalı (Kullanıcının İstediği Görselin Birebir Aynısı) -->
+  <div id="akakceAnalysisModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-3 sm:p-6 hidden">
+    <div class="bg-white text-slate-900 rounded-2xl max-w-4xl w-full p-6 sm:p-8 shadow-2xl space-y-5 max-h-[96vh] overflow-y-auto relative animate-in fade-in zoom-in-95 duration-200">
+      
+      <!-- Üst Başlık & Kapatma Butonu -->
+      <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+        <div class="flex items-center space-x-2.5 pr-4">
+          <div class="p-2 bg-blue-50 text-blue-600 rounded-xl">
+            <i data-lucide="activity" class="w-5 h-5"></i>
+          </div>
+          <h2 class="text-sm sm:text-base font-bold text-slate-800 tracking-tight leading-snug" id="modalAnalysisTitle">
+            Samsung 990 EVO Plus 1TB M.2 SSD son 6 aylık fiyat değişim grafiği
+          </h2>
+        </div>
+        <button onclick="closeAkakceAnalysisModal()" class="text-slate-400 hover:text-slate-700 p-1.5 rounded-xl hover:bg-slate-100 transition shrink-0" title="Kapat">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <!-- Dönem Seçim Butonları (1 Yıl, 6 Ay, 1 Ay, 1 Hafta, Gelecek 15 Gün) -->
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 pt-1">
+        <button onclick="setModalAnalysisPeriod('1yil')" id="btnPeriod1y" class="px-5 py-1.5 sm:py-2 text-xs sm:text-sm rounded-xl border border-slate-200 text-slate-600 font-medium hover:border-slate-300 hover:bg-slate-50 transition">
+          1 Yıl
+        </button>
+        <button onclick="setModalAnalysisPeriod('6ay')" id="btnPeriod6m" class="px-5 py-1.5 sm:py-2 text-xs sm:text-sm rounded-xl border-2 border-slate-400 bg-slate-50 text-slate-900 font-bold shadow-sm transition">
+          6 Ay
+        </button>
+        <button onclick="setModalAnalysisPeriod('1ay')" id="btnPeriod1m" class="px-5 py-1.5 sm:py-2 text-xs sm:text-sm rounded-xl border border-slate-200 text-slate-600 font-medium hover:border-slate-300 hover:bg-slate-50 transition">
+          1 Ay
+        </button>
+        <button onclick="setModalAnalysisPeriod('1hafta')" id="btnPeriod1w" class="px-5 py-1.5 sm:py-2 text-xs sm:text-sm rounded-xl border border-slate-200 text-slate-600 font-medium hover:border-slate-300 hover:bg-slate-50 transition">
+          1 Hafta
+        </button>
+        <button onclick="setModalAnalysisPeriod('tahmin')" id="btnPeriodEst" class="px-5 py-1.5 sm:py-2 text-xs sm:text-sm rounded-xl border border-slate-200 text-slate-400 font-medium hover:bg-slate-50 transition">
+          Gelecek 15 Gün
+        </button>
+      </div>
+
+      <!-- Grafik Çizim Alanı (Akakçe Logosu & Filigran Arka Planlı) -->
+      <div class="relative w-full h-72 sm:h-84 bg-slate-50/60 rounded-2xl p-4 border border-slate-100 overflow-hidden">
+        <!-- Akakçe Filigranı -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.06]">
+          <span class="text-7xl font-black tracking-widest text-slate-900 select-none">akakçe</span>
+        </div>
+        <canvas id="akakceModalChart"></canvas>
+      </div>
+
+      <!-- Alt Özet İstatistik Satırları (Görseldeki Birebir Düzen) -->
+      <div class="border-t border-slate-200 pt-4 space-y-2 max-w-lg mx-auto text-xs sm:text-sm">
+        <div class="flex items-center justify-between text-slate-600">
+          <span class="font-medium">Dönem İçi En Yüksek Fiyat:</span>
+          <span class="font-black text-slate-900 text-base" id="modalRowMaxPrice">12.041,49 TL</span>
+        </div>
+        <div class="flex items-center justify-between text-slate-600">
+          <span class="font-medium">Dönem İçi En Düşük Fiyat:</span>
+          <span class="font-black text-slate-900 text-base" id="modalRowMinPrice">5.865,93 TL</span>
+        </div>
+        <div class="flex items-center justify-between text-slate-600">
+          <span class="font-medium">Şu Andaki Fiyat:</span>
+          <span class="font-black text-slate-900 text-base" id="modalRowCurrentPrice">12.041,49 TL</span>
+        </div>
+      </div>
+
+      <!-- En Alttaki Durum İkaz Kutusu (Görseldeki Birebir Oval Gri Kutu) -->
+      <div class="max-w-xl mx-auto pt-1">
+        <div class="bg-slate-100 border border-slate-200/80 rounded-xl py-2.5 px-6 text-center text-xs sm:text-sm font-medium text-slate-700 shadow-sm" id="modalStatusPill">
+          Şu andaki fiyat son 6 ayın en yüksek fiyatı.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Büyük Boy Ürün Görseli İnceleme Modalı (Lightbox) -->
+  <div id="imageLightboxModal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 flex items-center justify-center p-4 sm:p-6 hidden">
+    <div class="bg-slate-900 border border-slate-700/80 rounded-2xl max-w-2xl w-full p-5 sm:p-6 shadow-2xl relative animate-in fade-in zoom-in-95 duration-200 flex flex-col space-y-4">
+      
+      <!-- Başlık ve Kapatma Butonu -->
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <div class="flex items-center space-x-2.5 min-w-0 pr-4">
+          <div class="p-1.5 bg-emerald-500/10 text-emerald-400 rounded-lg shrink-0">
+            <i data-lucide="image" class="w-4 h-4"></i>
+          </div>
+          <h3 class="text-sm sm:text-base font-bold text-slate-100 truncate" id="lightboxProductTitle">
+            Ürün Görseli
+          </h3>
+        </div>
+        <button onclick="closeImageLightbox()" class="text-slate-400 hover:text-white p-1.5 rounded-xl hover:bg-slate-800 transition shrink-0" title="Kapat (ESC)">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Yüksek Çözünürlüklü Beyaz Stüdyo Görsel Alanı -->
+      <div class="relative w-full h-80 sm:h-96 bg-white rounded-xl overflow-hidden border border-slate-200/50 flex items-center justify-center p-6 shadow-inner">
+        <img id="lightboxImage" 
+             src="" 
+             alt="Ürün Görseli" 
+             class="max-h-full max-w-full object-contain filter drop-shadow-md select-none transition-transform duration-300 hover:scale-105">
+      </div>
+
+      <!-- Alt Bilgi ve Butonlar -->
+      <div class="flex items-center justify-between pt-1">
+        <div>
+          <p class="text-[10px] text-slate-400 font-medium">Akakçe En Düşük Liste Fiyatı</p>
+          <p class="text-xl font-black text-white" id="lightboxPrice">-</p>
+        </div>
+        <div class="flex items-center space-x-2">
+          <button onclick="closeImageLightbox()" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition">
+            Kapat
+          </button>
+          <a id="lightboxDirectLink" href="#" target="_blank" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition flex items-center space-x-1.5 shadow-md shadow-emerald-600/20">
+            <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i>
+            <span>Akakçe'de İncele</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Bildirim Toast Kutusu -->
+  <div id="toastBox" class="fixed bottom-5 right-5 z-50 transform transition-all duration-300 translate-y-24 opacity-0 pointer-events-none">
+    <div id="toastInner" class="bg-slate-900 border border-emerald-500/50 shadow-2xl rounded-xl p-4 flex items-center space-x-3 text-xs text-slate-100 max-w-md">
+      <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 shrink-0" id="toastIcon"></i>
+      <span id="toastMsg">İşlem başarıyla gerçekleştirildi.</span>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 bg-slate-900/40 py-6 mt-12 text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div class="flex items-center space-x-2">
+        <span class="font-bold text-slate-300">F&S Yazılım Bilişim</span>
+        <span class="text-slate-600">•</span>
+        <span class="text-slate-400">Future Solutions</span>
+      </div>
+      <p class="text-[11px] text-slate-500">
+        Akakçe Canlı Fiyat Takip, Saat 10:00 Raporlama & Anlık Eşik Alarm Sistemi
+      </p>
+    </div>
+  </footer>
+
+  <script src="/static/app.js?v=2.8.2"></script>
+  <script>
+    // Lucide ikonlarını başlat
+    lucide.createIcons();
+  </script>
+</body>
+</html>

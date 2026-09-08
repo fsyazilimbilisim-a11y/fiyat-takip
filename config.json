@@ -1,0 +1,241 @@
+{
+  "products": [
+    {
+      "id": "samsung-990-evo-plus-1tb",
+      "name": "Samsung 990 EVO Plus 1TB M.2 SSD",
+      "category": "SSD & Depolama",
+      "capacity": "1TB",
+      "url": "https://www.akakce.com/ssd/en-ucuz-samsung-990-evo-plus-mz-v9s1t0bw-pci-express-1-tb-m-2-fiyati,836325211.html",
+      "threshold_price": 5000.0,
+      "is_active": true,
+      "image_url": "https://cdn.akakce.com/z/samsung/samsung-990-evo-plus-mz-v9s1t0bw-pci-express-1-tb-m-2.jpg"
+    },
+    {
+      "id": "samsung-990-evo-plus-2tb",
+      "name": "Samsung 990 EVO Plus 2TB M.2 SSD",
+      "category": "SSD & Depolama",
+      "capacity": "2TB",
+      "url": "https://www.akakce.com/ssd/en-ucuz-samsung-990-evo-plus-mz-v9s2t0bw-pci-express-2-tb-m-2-fiyati,836325138.html",
+      "threshold_price": 10000.0,
+      "is_active": true,
+      "image_url": "https://cdn.akakce.com/z/samsung/samsung-990-evo-plus-mz-v9s2t0bw-pci-express-2-tb-m-2.jpg"
+    },
+    {
+      "id": "samsung-990-evo-plus-4tb",
+      "name": "Samsung 990 EVO Plus 4TB M.2 SSD",
+      "category": "SSD & Depolama",
+      "capacity": "4TB",
+      "url": "https://www.akakce.com/ssd/en-ucuz-samsung-990-evo-plus-mz-v9s4t0bw-pci-express-5-0-4-tb-m-2-fiyati,843606908.html",
+      "threshold_price": 13000.0,
+      "is_active": false,
+      "image_url": "https://cdn.akakce.com/z/samsung/samsung-990-evo-plus-mz-v9s4t0bw-pci-express-5-0-4-tb-m-2.jpg"
+    },
+    {
+      "id": "walram-240gb-sata-ssd",
+      "name": "Walram 2.5'' SATA 240GB Dahili SSD",
+      "category": "SSD & Depolama",
+      "capacity": "240GB",
+      "url": "https://www.akakce.com/ssd/en-ucuz-walram-2-5-sata-240gb-dahili-fiyati,1235974174.html",
+      "threshold_price": 1500.0,
+      "is_active": true,
+      "image_url": "https://iis-akakce.akamaized.net/p.z?https%3a%2f%2fn11scdn.akamaized.net%2fa1%2f1024%2f12%2f17%2f05%2f03%2fIMG-8331988825682552017.jpg"
+    },
+    {
+      "id": "walram-120gb-sata-ssd",
+      "name": "Walram 120GB Dahili SSD",
+      "category": "SSD & Depolama",
+      "capacity": "120GB",
+      "url": "https://www.akakce.com/ssd/en-ucuz-walram-120-gb-dahili-fiyati,1288422548.html",
+      "threshold_price": 1200.0,
+      "is_active": true,
+      "image_url": "https://iis-akakce.akamaized.net/p.z?https%3a%2f%2fn11scdn.akamaized.net%2fa1%2f1024%2f05%2f49%2f04%2f43%2fIMG-5598119137435256379.jpg"
+    },
+    {
+      "id": "walram-480gb-sata-ssd",
+      "name": "Walram 480GB Dahili SSD",
+      "category": "SSD & Depolama",
+      "capacity": "480GB",
+      "url": "https://www.akakce.com/ssd/en-ucuz-walram-2-sata-480gb-dahili-fiyati,1213945576.html",
+      "threshold_price": 2800.0,
+      "is_active": true,
+      "image_url": "https://iis-akakce.akamaized.net/p.z?https%3a%2f%2fproductimages.hepsiburada.net%2fs%2f777%2f600%2f110001206127694.jpg"
+    },
+    {
+      "id": "kioxia-exceria-960gb-sata",
+      "name": "Kioxia Exceria 960GB 2.5'' SATA SSD",
+      "category": "SSD & Depolama",
+      "capacity": "960GB SATA",
+      "url": "https://www.akakce.com/ssd/en-ucuz-kioxia-960-gb-exceria-ltc10z960gg8-2-5-sata-3-0-fiyati,709266791.html",
+      "threshold_price": 2500.0,
+      "is_active": true,
+      "image_url": "https://cdn.akakce.com/z/kioxia/kioxia-960-gb-exceria-ltc10z960gg8-2-5-sata-3-0.jpg"
+    },
+    {
+      "id": "amd-ryzen-5-5600",
+      "name": "AMD Ryzen 5 5600 3.50GHz İşlemci",
+      "category": "İşlemci & Anakart",
+      "capacity": "AM4 / 6 Çekirdek",
+      "url": "https://www.akakce.com/islemci/en-ucuz-amd-ryzen-5-5600-alti-cekirdek-3-50-ghz-fiyati,1782415463.html",
+      "threshold_price": 5500.0,
+      "is_active": true,
+      "image_url": "https://cdn.akakce.com/z/amd/amd-ryzen-5-5600-alti-cekirdek-3-50-ghz.jpg"
+    },
+    {
+      "id": "asus-prime-b450m-a-ii",
+      "name": "Asus Prime B450M-A II AM4 Anakart",
+      "category": "İşlemci & Anakart",
+      "capacity": "DDR4 Micro-ATX",
+      "url": "https://www.akakce.com/anakart/en-ucuz-asus-prime-b450m-a-ii-amd-am4-ddr4-micro-atx-fiyati,863611010.html",
+      "threshold_price": 2500.0,
+      "is_active": true,
+      "image_url": "https://cdn.akakce.com/asus/asus-prime-b450m-a-ii-amd-am4-ddr4-micro-atx-z.jpg"
+    },
+    {
+      "id": "logitech-g102-lightsync",
+      "name": "Logitech G102 Lightsync Oyuncu Mouse",
+      "category": "Çevre Birimleri",
+      "capacity": "8000 DPI / RGB",
+      "url": "https://www.akakce.com/mouse/en-ucuz-logitech-g102-lightsync-siyah-910-005802-optik-kablolu-oyuncu-fiyati,796876624.html",
+      "threshold_price": 650.0,
+      "is_active": true,
+      "image_url": "https://cdn.akakce.com/z/logitech/logitech-g102-lightsync-siyah-910-005802-optik-kablolu-oyuncu.jpg"
+    },
+    {
+      "id": "steelseries-arctis-nova-1",
+      "name": "SteelSeries Arctis Nova 1 Oyuncu Kulaklığı",
+      "category": "Çevre Birimleri",
+      "capacity": "Kablolu / Mikrofonlu",
+      "url": "https://www.akakce.com/kulaklik/en-ucuz-steelseries-arctis-nova-1-beyaz-kablolu-mikrofonlu-oyuncu-kulakligi-fiyati,2121018852.html",
+      "threshold_price": 2500.0,
+      "is_active": true,
+      "image_url": "https://cdn.akakce.com/z/steelseries/steelseries-arctis-nova-1-beyaz-kablolu-mikrofonlu-oyuncu-kulakligi.jpg"
+    },
+    {
+      "id": "lego-classic-10698",
+      "name": "Lego Classic 10698 Büyük Boy Yaratıcı Yapım Kutusu",
+      "category": "Oyuncak & Hobi",
+      "capacity": "790 Parça",
+      "url": "https://www.akakce.com/lego-parcali-bloklar/en-ucuz-lego-classic-buyuk-boy-yaratici-yapim-kutusu-10698-fiyati,5564290.html",
+      "threshold_price": 2200.0,
+      "is_active": true,
+      "image_url": "https://cdn.akakce.com/lego/lego-classic-buyuk-boy-yaratici-yapim-kutusu-10698-z.jpg"
+    },
+    {
+      "id": "pilsan-attack-akulu-araba",
+      "name": "Pilsan Attack 12V Çift Kişilik Akülü Araba",
+      "category": "Oyuncak & Hobi",
+      "capacity": "12V / Çift Kişilik",
+      "url": "https://www.akakce.com/akulu-araba/en-ucuz-pilsan-attack-12v-cift-kisilik-uzaktan-kumandali-05-272-fiyati,486344514.html",
+      "threshold_price": 18000.0,
+      "is_active": true,
+      "image_url": "https://cdn.akakce.com/z/pilsan/pilsan-attack-12v-cift-kisilik-uzaktan-kumandali-05-272.jpg"
+    },
+    {
+      "id": "magly-3d-manyetik-blok",
+      "name": "Magly 3D 72 Parça Manyetik Yapı Blokları",
+      "category": "Oyuncak & Hobi",
+      "capacity": "72 Parça Manyetik",
+      "url": "https://www.akakce.com/lego-parcali-bloklar/en-ucuz-magly-3-boyutlu-72-parca-manyetik-yapi-bloklari-fiyati,845862496.html",
+      "threshold_price": 2000.0,
+      "is_active": true,
+      "image_url": "https://cdn.akakce.com/z/magly/magly-3-boyutlu-72-parca-manyetik-yapi-bloklari.jpg"
+    },
+    {
+      "id": "rookie-venti-cocuk-bisikleti",
+      "name": "Rookie Venti 20 Jant 21 Vites Çocuk Bisikleti",
+      "category": "Bisiklet & Spor",
+      "capacity": "20 Jant / Amortisörlü",
+      "url": "https://www.akakce.com/bisiklet/en-ucuz-rookie-venti-20-jant-21-vites-amortisorlu-cocuk-i-fiyati,1350472056.html",
+      "threshold_price": 6500.0,
+      "is_active": true,
+      "image_url": "https://cdn.akakce.com/z/rookie/rookie-venti-20-jant-21-vites-amortisorlu-cocuk-i.jpg"
+    },
+    {
+      "id": "kron-xc75-dag-bisikleti",
+      "name": "Kron XC 75 V 21 Vites 24 Jant Dağ Bisikleti",
+      "category": "Bisiklet & Spor",
+      "capacity": "24 Jant / 21 Vites",
+      "url": "https://www.akakce.com/bisiklet/en-ucuz-kron-xc75-24-cocuk-erkek-v-fren-aluminyum-21-vites-onay-fiyati,1694121235.html",
+      "threshold_price": 13000.0,
+      "is_active": true,
+      "image_url": "https://cdn.akakce.com/z/kron/kron-xc75-24-cocuk-erkek-v-fren-aluminyum-21-vites-onay.jpg"
+    },
+    {
+      "id": "bianchi-magma-27x-dag-bisikleti",
+      "name": "Bianchi Magma 27.X Essa HD Dağ Bisikleti",
+      "category": "Bisiklet & Spor",
+      "capacity": "27.5 Jant / Hidrolik Disk",
+      "url": "https://www.akakce.com/bisiklet/en-ucuz-bianchi-magma-27-x-essa-hd-8-vites-27-5-jant-dag-i-fiyati,1359472492.html",
+      "threshold_price": 32000.0,
+      "is_active": true,
+      "image_url": "https://cdn.akakce.com/z/bianchi/bianchi-magma-27-x-essa-hd-8-vites-27-5-jant-dag-i.jpg"
+    },
+    {
+      "id": "kingston-fury-beast-16gb-ddr4",
+      "name": "Kingston Fury Beast 16 GB 3200 MHz CL16 DDR4 Ram",
+      "category": "RAM & Bellek",
+      "capacity": "16GB 3200MHz DDR4",
+      "url": "https://www.akakce.com/ram/en-ucuz-kingston-fury-beast-16-gb-3200-mhz-ddr4-cl16-kf432c16bb-16-fiyati,1359419327.html",
+      "threshold_price": 6000.0,
+      "is_active": true,
+      "image_url": "https://cdn.akakce.com/z/kingston/kingston-fury-beast-16-gb-3200-mhz-ddr4-cl16-kf432c16bb-16.jpg"
+    },
+    {
+      "id": "crucial-16gb-5600mhz-ddr5",
+      "name": "Crucial 16 GB 5600 MHz CL46 DDR5 Ram",
+      "category": "RAM & Bellek",
+      "capacity": "16GB 5600MHz DDR5",
+      "url": "https://www.akakce.com/ram/en-ucuz-crucial-16-gb-5600-mhz-ddr5-ct16g56c46s5-fiyati,355160557.html",
+      "threshold_price": 11500.0,
+      "is_active": true,
+      "image_url": "https://iis-akakce.akamaized.net/p.z?%2f%2fplatincdn.com%2f3452%2fpictures%2fXKWIR94716_crucial-16gb-ddr5-5600-sodimm-cl46-16gb.jpg"
+    },
+    {
+      "id": "ryzen-atlas-gaming-pc",
+      "name": "RYZEN Atlas Gaming Masaüstü Oyuncu Bilgisayarı",
+      "category": "Bilgisayar & Laptop",
+      "capacity": "Ryzen 5 5500 / 16GB / RX580",
+      "url": "https://www.akakce.com/oyun-bilgisayari/en-ucuz-ryzen-atlas-gaming-pc-oyuncu-bilgisayari-masaustu-kasa-5-5500-rx580-8gb-hazir-sistem-fiyati,928156101.html",
+      "threshold_price": 28000.0,
+      "is_active": true,
+      "image_url": "https://iis-akakce.akamaized.net/p.z?https%3a%2f%2fcdn.dsmcdn.com%2fty1771%2fprod%2fQC_ENRICHMENT%2f20251012%2f21%2f991626f9-6d3b-3a5c-8867-af74c582acbd%2f1_org_zoom.jpg"
+    },
+    {
+      "id": "asus-tuf-gaming-t500-rtx5060",
+      "name": "Asus TUF Gaming T500 RTX5060 Oyuncu Bilgisayarı",
+      "category": "Bilgisayar & Laptop",
+      "capacity": "Core 7 / 16GB / 1TB / RTX5060",
+      "url": "https://www.akakce.com/oyun-bilgisayari/en-ucuz-asus-tuf-gaming-t500-t500mv-07240h0860-core-7-240h-16-gb-1-tb-ssd-rtx5060-masaustu-oyuncu-bilgisayari-fiyati,1479083061.html",
+      "threshold_price": 78000.0,
+      "is_active": true,
+      "image_url": "https://cdn.akakce.com/z/asus/asus-tuf-gaming-t500-t500mv-07240h0860-core-7-240h-16-gb-1-tb-ssd-rtx5060-masaustu-oyuncu-bilgisayari.jpg"
+    },
+    {
+      "id": "macbook-air-m2-256gb",
+      "name": "Apple MacBook Air M2 16 GB 256 GB SSD 13.6''",
+      "category": "Bilgisayar & Laptop",
+      "capacity": "M2 / 16GB RAM / 256GB SSD",
+      "url": "https://www.akakce.com/laptop-notebook/en-ucuz-macbook-air-m2-16-gb-256-gb-ssd-13-6-notebook-fiyati,824481159.html",
+      "threshold_price": 50000.0,
+      "is_active": true,
+      "image_url": "https://cdn.akakce.com/z/apple/macbook-air-m2-16-gb-256-gb-ssd-13-6-notebook.jpg"
+    }
+  ],
+  "schedule": {
+    "daily_report_time": "10:00",
+    "check_interval_minutes": 15,
+    "enabled": true
+  },
+  "notifications": {
+    "desktop_enabled": true,
+    "telegram_enabled": false,
+    "telegram_bot_token": "",
+    "telegram_chat_id": "",
+    "discord_enabled": false,
+    "discord_webhook_url": ""
+  },
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8000
+  }
+}

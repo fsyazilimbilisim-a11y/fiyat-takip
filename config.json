@@ -319,6 +319,126 @@
       "threshold_price": 500.0,
       "is_active": true,
       "image_url": "/static/product_imgs/s-link-slx-283-altin-uc-3m.jpg"
+    },
+    {
+      "id": "kingston-nv2-1tb",
+      "name": "Kingston NV2 1TB NVMe PCIe 4.0 M.2 SSD",
+      "category": "SSD & Depolama",
+      "capacity": "1TB (3500/2100 MB/s)",
+      "url": "https://www.akakce.com/ssd/en-ucuz-kingston-1tb-nvme-m-2-3500-2100mb-snv2s-1000g-fiyati,5242127.html",
+      "threshold_price": 2800.0,
+      "is_active": true,
+      "image_url": "/static/product_imgs/kingston-nv2-1tb.jpg"
+    },
+    {
+      "id": "samsung-990-pro-1tb",
+      "name": "Samsung 990 PRO 1TB PCIe 4.0 NVMe M.2 SSD",
+      "category": "SSD & Depolama",
+      "capacity": "1TB (7450/6900 MB/s)",
+      "url": "https://www.akakce.com/ssd/en-ucuz-samsung-1-tb-990-pro-mz-v9p1t0bw-m-2-pci-express-4-0-fiyati,120631121.html",
+      "threshold_price": 4500.0,
+      "is_active": true,
+      "image_url": "/static/product_imgs/samsung-990-pro-1tb.jpg"
+    },
+    {
+      "id": "crucial-p3-plus-1tb",
+      "name": "Crucial P3 Plus 1TB PCIe 4.0 NVMe M.2 SSD",
+      "category": "SSD & Depolama",
+      "capacity": "1TB (5000/4200 MB/s)",
+      "url": "https://www.akakce.com/ssd/en-ucuz-crucial-1-tb-p3-plus-3d-nand-m-2-ct1000p3p8-pci-express-4-0-fiyati,206171049.html",
+      "threshold_price": 2700.0,
+      "is_active": true,
+      "image_url": "/static/product_imgs/crucial-p3-plus-1tb.jpg"
+    },
+    {
+      "id": "kingston-kc3000-1tb",
+      "name": "Kingston KC3000 1TB PCIe 4.0 NVMe M.2 SSD",
+      "category": "SSD & Depolama",
+      "capacity": "1TB (7000/6000 MB/s)",
+      "url": "https://www.akakce.com/ssd/en-ucuz-kingston-1-tb-kc3000-skc3000s-1024g-m-2-pci-express-4-0-fiyati,1639319475.html",
+      "threshold_price": 3800.0,
+      "is_active": true,
+      "image_url": "/static/product_imgs/kingston-kc3000-1tb.jpg"
+    },
+    {
+      "id": "kioxia-exceria-plus-g3-1tb",
+      "name": "Kioxia Exceria Plus G3 1TB PCIe 4.0 M.2 SSD",
+      "category": "SSD & Depolama",
+      "capacity": "1TB (5000/3900 MB/s)",
+      "url": "https://www.akakce.com/ssd/en-ucuz-kioxia-exceria-plus-g3-lsd10z001tg8-pci-express-4-0-1-tb-m-2-fiyati,384023060.html",
+      "threshold_price": 2600.0,
+      "is_active": true,
+      "image_url": "/static/product_imgs/kioxia-exceria-plus-g3-1tb.jpg"
+    },
+    {
+      "id": "samsung-980-pro-1tb",
+      "name": "Samsung 980 PRO 1TB PCIe 4.0 NVMe M.2 SSD",
+      "category": "SSD & Depolama",
+      "capacity": "1TB (7000/5000 MB/s)",
+      "url": "https://www.akakce.com/ssd/en-ucuz-samsung-1-tb-980-pro-mz-v8p1t0bw-m-2-pci-express-4-0-fiyati,1000322946.html",
+      "threshold_price": 4000.0,
+      "is_active": true,
+      "image_url": "/static/product_imgs/samsung-980-pro-1tb.jpg"
+    },
+    {
+      "id": "corsair-vengeance-lpx-16gb-ddr4",
+      "name": "Corsair Vengeance LPX 16 GB (2x8) 3200 MHz CL16 DDR4 Ram",
+      "category": "RAM & Bellek",
+      "capacity": "16 GB (2x8GB) 3200 MHz CL16",
+      "url": "https://www.akakce.com/ram/en-ucuz-corsair-vengeance-16-gb-2x8-3200mhz-ddr4-cl16-cmk16gx4m2e3200c16-fiyati,504034759.html",
+      "threshold_price": 1800.0,
+      "is_active": true,
+      "image_url": "/static/product_imgs/corsair-vengeance-lpx-16gb-ddr4.jpg"
+    },
+    {
+      "id": "gskill-ripjaws-v-16gb-3600-ddr4",
+      "name": "G.Skill Ripjaws V 16 GB 3600 MHz CL18 DDR4 Ram",
+      "category": "RAM & Bellek",
+      "capacity": "16 GB 3600 MHz CL18",
+      "url": "https://www.akakce.com/ram/en-ucuz-g-skill-ripjawsv-16-gb-3600-mhz-ddr4-cl18-f4-3600c18s-16gvk-fiyati,85324705.html",
+      "threshold_price": 1900.0,
+      "is_active": true,
+      "image_url": "/static/product_imgs/gskill-ripjaws-v-16gb-3600-ddr4.jpg"
+    },
+    {
+      "id": "kingston-fury-beast-expo-32gb-6000-ddr5",
+      "name": "Kingston Fury Beast Black EXPO 32 GB (2x16) 6000 MHz CL30 DDR5 Ram",
+      "category": "RAM & Bellek",
+      "capacity": "32 GB (2x16GB) 6000 MHz CL30",
+      "url": "https://www.akakce.com/ram/en-ucuz-kingston-beast-black-expo-32-gb-6000-mhz-cl30-kf560c30bbe-32tr-ddr5-fiyati,680063007.html",
+      "threshold_price": 4500.0,
+      "is_active": true,
+      "image_url": "/static/product_imgs/kingston-fury-beast-expo-32gb-6000-ddr5.jpg"
+    },
+    {
+      "id": "corsair-vengeance-rgb-32gb-6000-ddr5",
+      "name": "Corsair Vengeance RGB 32 GB (2x16) 6000 MHz CL36 DDR5 Ram",
+      "category": "RAM & Bellek",
+      "capacity": "32 GB (2x16GB) 6000 MHz CL36 RGB",
+      "url": "https://www.akakce.com/ram/en-ucuz-corsair-vengeance-rgb-32-gb-2x16-6000-mhz-cl36-cmh32gx5m2e6000z36-ddr5-fiyati,488657384.html",
+      "threshold_price": 4800.0,
+      "is_active": true,
+      "image_url": "/static/product_imgs/corsair-vengeance-rgb-32gb-6000-ddr5.jpg"
+    },
+    {
+      "id": "patriot-viper-venom-32gb-6000-ddr5",
+      "name": "Patriot Viper Venom 32 GB (2x16) 6000 MHz CL30 DDR5 Ram",
+      "category": "RAM & Bellek",
+      "capacity": "32 GB (2x16GB) 6000 MHz CL30",
+      "url": "https://www.akakce.com/ram/en-ucuz-patriot-viper-venom-32-gb-2x16-6000-mhz-cl30-pvv532g600c30k-ddr5-fiyati,690675232.html",
+      "threshold_price": 4200.0,
+      "is_active": true,
+      "image_url": "/static/product_imgs/patriot-viper-venom-32gb-6000-ddr5.jpg"
+    },
+    {
+      "id": "kingston-16gb-ddr5-5600-sodimm",
+      "name": "Kingston 16 GB DDR5 5600 MHz CL46 SODIMM Notebook Ram",
+      "category": "RAM & Bellek",
+      "capacity": "16 GB DDR5 5600 MHz (Notebook)",
+      "url": "https://www.akakce.com/ram/en-ucuz-kingston-16-gb-ddr5-5600-mhz-cl46-sodimm-kvr56s46bs8-16-fiyati,208646332.html",
+      "threshold_price": 1900.0,
+      "is_active": true,
+      "image_url": "/static/product_imgs/kingston-16gb-ddr5-5600-sodimm.jpg"
     }
   ],
   "schedule": {

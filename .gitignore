@@ -8,4 +8,9 @@ cloudflared.exe
 *.db-shm
 *.db-wal
 .mingit/
-
+scratch_*.py
+test_*.py
+snap_*.py
+integrate_*.py
+download_*.py
+search_*.py

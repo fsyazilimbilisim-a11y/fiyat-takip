@@ -170,11 +170,15 @@ async def get_status():
 
 @app.get("/api/products")
 async def get_products():
+    config = scheduler_service.load_config()
+    cfg_prods = {cp["id"]: cp for cp in config.get("products", [])}
     products = database.get_all_products()
     enriched = []
     
     for p in products:
         prod_id = p["id"]
+        cfg_item = cfg_prods.get(prod_id, {})
+        is_last_6m = bool(cfg_item.get("is_last_6m_lowest", False))
         latest = database.get_latest_price(prod_id)
         yesterday = database.get_yesterday_price(prod_id)
         
@@ -212,7 +216,7 @@ async def get_products():
         if diff_pct < 0:
             candidates.append(abs(diff_pct))
         best_discount = max(candidates) if candidates else 0.0
-        is_deal = bool(drop_from_avg >= 20.0 or stats.get("is_big_discount") or best_discount >= 20.0)
+        is_deal = bool(drop_from_avg >= 20.0 or stats.get("is_big_discount") or best_discount >= 20.0 or is_last_6m)
                 
         enriched.append({
             "id": prod_id,
@@ -241,6 +245,7 @@ async def get_products():
             "max_price_str": scheduler_service.format_currency(max_price) if max_price > 0 else "-",
             "discount_percent": round(drop_from_avg if drop_from_avg > 0 else best_discount, 1),
             "is_featured_deal": is_deal,
+            "is_last_6m_lowest": is_last_6m,
             "is_below_threshold": bool(cur_p and p.get("threshold_price") and cur_p <= p.get("threshold_price"))
         })
         

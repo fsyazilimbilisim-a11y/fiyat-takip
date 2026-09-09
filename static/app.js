@@ -91,19 +91,31 @@ async function loadProducts(rebuildChartSelect = true) {
 function updateCategoryCounts() {
   if (!allProductsList) return;
   const countAll = allProductsList.length;
+  const countLast6m = allProductsList.filter(p => p.is_last_6m_lowest).length;
   const countDeals = allProductsList.filter(p => p.is_featured_deal || (p.discount_percent && p.discount_percent >= 20)).length;
+  const countMON = allProductsList.filter(p => (p.category || '').includes('Monitör')).length;
+  const countCLIMA = allProductsList.filter(p => (p.category || '').includes('Klima') || (p.category || '').includes('Vantilatör') || (p.category || '').includes('Hava') || (p.category || '').includes('Isı')).length;
+  const countHOME = allProductsList.filter(p => (p.category || '').includes('Beyaz Eşya') || (p.category || '').includes('Buzdolabı') || (p.category || '').includes('Süpürge') || (p.category || '').includes('Mutfak') || (p.category || '').includes('Çay') || (p.category || '').includes('Blender') || (p.category || '').includes('Düdüklü') || (p.category || '').includes('Hamur')).length;
+  const countWATCH = allProductsList.filter(p => (p.category || '').includes('Saat')).length;
+  const countCARE = allProductsList.filter(p => (p.category || '').includes('Bakım') || (p.category || '').includes('Masaj') || (p.category || '').includes('Saç')).length;
   const countTOY = allProductsList.filter(p => (p.category || '').includes('Oyuncak') || (p.category || '').includes('Hobi')).length;
-  const countBIKE = allProductsList.filter(p => (p.category || '').includes('Bisiklet') || (p.category || '').includes('Spor')).length;
+  const countBIKE = allProductsList.filter(p => (p.category || '').includes('Bisiklet') || (p.category || '').includes('Spor') || (p.category || '').includes('Scooter')).length;
   const countRAM = allProductsList.filter(p => (p.category || '').includes('RAM') || (p.category || '').includes('Bellek')).length;
   const countPC = allProductsList.filter(p => (p.category || '').includes('Bilgisayar') || (p.category || '').includes('Laptop')).length;
   const countSSD = allProductsList.filter(p => (p.category || '').includes('SSD') || (p.category || '').includes('Depolama')).length;
   const countCPU = allProductsList.filter(p => (p.category || '').includes('İşlemci') || (p.category || '').includes('Anakart')).length;
   const countCABLE = allProductsList.filter(p => (p.category || '').includes('Kablo') || (p.category || '').includes('Dönüştürücü') || (p.category || '').includes('HDMI')).length;
-  const countACC = allProductsList.filter(p => (p.category || '').includes('Çevre') || (p.category || '').includes('Kulaklık') || (p.category || '').includes('Mouse')).length;
+  const countACC = allProductsList.filter(p => (p.category || '').includes('Çevre') || (p.category || '').includes('Kulaklık') || (p.category || '').includes('Mouse') || (p.category || '').includes('Yazıcı') || (p.category || '').includes('Takip')).length;
 
   const setT = (id, val) => { const el = document.getElementById(id); if (el) el.innerText = val; };
   setT('catCount_all', countAll);
+  setT('catCount_last_6m', countLast6m);
   setT('catCount_deals', countDeals);
+  setT('catCount_MON', countMON);
+  setT('catCount_CLIMA', countCLIMA);
+  setT('catCount_HOME', countHOME);
+  setT('catCount_WATCH', countWATCH);
+  setT('catCount_CARE', countCARE);
   setT('catCount_TOY', countTOY);
   setT('catCount_BIKE', countBIKE);
   setT('catCount_RAM', countRAM);
@@ -119,15 +131,21 @@ function filterProductsByCategory(category) {
   
   const btnMap = {
     'all': 'catBtn_all',
+    'last_6m': 'catBtn_last_6m',
     'deals_20': 'catBtn_deals',
-    'Oyuncak & Hobi': 'catBtn_TOY',
-    'Bisiklet & Spor': 'catBtn_BIKE',
-    'RAM & Bellek': 'catBtn_RAM',
-    'Bilgisayar & Laptop': 'catBtn_PC',
+    'Monitör & Ekran': 'catBtn_MON',
+    'Klima & Isıtma': 'catBtn_CLIMA',
+    'Beyaz Eşya & Ev Aletleri': 'catBtn_HOME',
     'SSD & Depolama': 'catBtn_SSD',
-    'İşlemci & Anakart': 'catBtn_CPU',
+    'RAM & Bellek': 'catBtn_RAM',
     'Kablo & Dönüştürücü': 'catBtn_CABLE',
-    'Çevre Birimleri': 'catBtn_ACC'
+    'Bilgisayar & Laptop': 'catBtn_PC',
+    'Saat & Aksesuar': 'catBtn_WATCH',
+    'Kişisel Bakım & Sağlık': 'catBtn_CARE',
+    'Çevre Birimleri': 'catBtn_ACC',
+    'İşlemci & Anakart': 'catBtn_CPU',
+    'Oyuncak & Hobi': 'catBtn_TOY',
+    'Bisiklet & Spor': 'catBtn_BIKE'
   };
   
   Object.entries(btnMap).forEach(([cat, id]) => {
@@ -136,12 +154,16 @@ function filterProductsByCategory(category) {
     if (cat === category) {
       if (cat === 'deals_20') {
         el.className = 'category-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-amber-500 text-slate-950 shadow-md transition flex items-center space-x-1.5';
+      } else if (cat === 'last_6m') {
+        el.className = 'category-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-cyan-500 text-slate-950 shadow-md transition flex items-center space-x-1.5';
       } else {
         el.className = 'category-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-emerald-600 text-white shadow-sm transition flex items-center space-x-1.5';
       }
     } else {
       if (cat === 'deals_20') {
         el.className = 'category-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-gradient-to-r from-amber-500/20 via-orange-500/20 to-rose-500/20 hover:from-amber-500/30 hover:to-rose-500/30 text-amber-300 border border-amber-500/40 transition shadow-sm flex items-center space-x-1.5';
+      } else if (cat === 'last_6m') {
+        el.className = 'category-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-indigo-500/20 hover:from-cyan-500/30 hover:to-indigo-500/30 text-cyan-300 border border-cyan-500/40 transition shadow-sm flex items-center space-x-1.5';
       } else {
         el.className = 'category-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition flex items-center space-x-1.5';
       }
@@ -157,15 +179,21 @@ function populateChartDropdown(products) {
   chartSelect.innerHTML = '';
   
   const categoryConfigs = [
+    { label: '📉 Son 6 Ayın En Düşükleri', filter: p => p.is_last_6m_lowest },
     { label: '🔥 %20+ İndirim Fırsatları', filter: p => p.is_featured_deal || (p.discount_percent && p.discount_percent >= 20) },
+    { label: '🖥️ Monitör & Ekran', filter: p => (p.category || '').includes('Monitör') },
+    { label: '❄️ Klima & Isıtma', filter: p => (p.category || '').includes('Klima') || (p.category || '').includes('Vantilatör') || (p.category || '').includes('Hava') || (p.category || '').includes('Isı') },
+    { label: '🏠 Beyaz Eşya & Ev Aletleri', filter: p => (p.category || '').includes('Beyaz Eşya') || (p.category || '').includes('Buzdolabı') || (p.category || '').includes('Süpürge') || (p.category || '').includes('Mutfak') || (p.category || '').includes('Çay') || (p.category || '').includes('Blender') },
+    { label: '💾 SSD & Depolama', filter: p => (p.category || '').includes('SSD') || (p.category || '').includes('Depolama') },
+    { label: '⚡ RAM & Bellek', filter: p => (p.category || '').includes('RAM') || (p.category || '').includes('Bellek') },
     { label: '🔌 Kablo & Dönüştürücü', filter: p => (p.category || '').includes('Kablo') || (p.category || '').includes('Dönüştürücü') || (p.category || '').includes('HDMI') },
+    { label: '💻 Bilgisayar & Laptop', filter: p => (p.category || '').includes('Bilgisayar') || (p.category || '').includes('Laptop') },
+    { label: '⌚ Saat & Aksesuar', filter: p => (p.category || '').includes('Saat') },
+    { label: '✨ Kişisel Bakım & Sağlık', filter: p => (p.category || '').includes('Bakım') || (p.category || '').includes('Masaj') || (p.category || '').includes('Saç') },
     { label: '🧸 Oyuncak & Hobi', filter: p => (p.category || '').includes('Oyuncak') || (p.category || '').includes('Hobi') },
     { label: '🚲 Bisiklet & Spor', filter: p => (p.category || '').includes('Bisiklet') || (p.category || '').includes('Spor') },
-    { label: '⚡ RAM & Bellek', filter: p => (p.category || '').includes('RAM') || (p.category || '').includes('Bellek') },
-    { label: '💻 Bilgisayar & Laptop', filter: p => (p.category || '').includes('Bilgisayar') || (p.category || '').includes('Laptop') },
-    { label: '💾 SSD & Depolama', filter: p => (p.category || '').includes('SSD') || (p.category || '').includes('Depolama') },
     { label: '⚡ İşlemci & Anakart', filter: p => (p.category || '').includes('İşlemci') || (p.category || '').includes('Anakart') },
-    { label: '🎧 Çevre Birimleri', filter: p => (p.category || '').includes('Çevre') || (p.category || '').includes('Kulaklık') || (p.category || '').includes('Mouse') }
+    { label: '🎧 Çevre Birimleri', filter: p => (p.category || '').includes('Çevre') || (p.category || '').includes('Kulaklık') || (p.category || '').includes('Mouse') || (p.category || '').includes('Yazıcı') || (p.category || '').includes('Takip') }
   ];
 
   categoryConfigs.forEach(cfg => {
@@ -192,17 +220,24 @@ function renderFilteredProductCards() {
   let products = allProductsList;
   if (currentCategoryFilter === 'deals_20') {
     products = allProductsList.filter(p => p.is_featured_deal || (p.discount_percent && p.discount_percent >= 20));
+  } else if (currentCategoryFilter === 'last_6m') {
+    products = allProductsList.filter(p => p.is_last_6m_lowest);
   } else if (currentCategoryFilter !== 'all') {
     products = allProductsList.filter(p => {
       const pCat = p.category || '';
+      if (currentCategoryFilter === 'Monitör & Ekran') return pCat.includes('Monitör');
+      if (currentCategoryFilter === 'Klima & Isıtma') return pCat.includes('Klima') || pCat.includes('Vantilatör') || pCat.includes('Hava') || pCat.includes('Isı');
+      if (currentCategoryFilter === 'Beyaz Eşya & Ev Aletleri') return pCat.includes('Beyaz Eşya') || pCat.includes('Buzdolabı') || pCat.includes('Süpürge') || pCat.includes('Mutfak') || pCat.includes('Çay') || pCat.includes('Blender') || pCat.includes('Düdüklü') || pCat.includes('Hamur');
+      if (currentCategoryFilter === 'Saat & Aksesuar') return pCat.includes('Saat');
+      if (currentCategoryFilter === 'Kişisel Bakım & Sağlık') return pCat.includes('Bakım') || pCat.includes('Masaj') || pCat.includes('Saç');
       if (currentCategoryFilter === 'Kablo & Dönüştürücü') return pCat.includes('Kablo') || pCat.includes('Dönüştürücü') || pCat.includes('HDMI');
       if (currentCategoryFilter === 'Oyuncak & Hobi') return pCat.includes('Oyuncak') || pCat.includes('Hobi');
-      if (currentCategoryFilter === 'Bisiklet & Spor') return pCat.includes('Bisiklet') || pCat.includes('Spor');
+      if (currentCategoryFilter === 'Bisiklet & Spor') return pCat.includes('Bisiklet') || pCat.includes('Spor') || pCat.includes('Scooter');
       if (currentCategoryFilter === 'RAM & Bellek') return pCat.includes('RAM') || pCat.includes('Bellek');
       if (currentCategoryFilter === 'Bilgisayar & Laptop') return pCat.includes('Bilgisayar') || pCat.includes('Laptop');
       if (currentCategoryFilter === 'SSD & Depolama') return pCat.includes('SSD') || pCat.includes('Depolama');
       if (currentCategoryFilter === 'İşlemci & Anakart') return pCat.includes('İşlemci') || pCat.includes('Anakart');
-      if (currentCategoryFilter === 'Çevre Birimleri') return pCat.includes('Çevre') || pCat.includes('Kulaklık') || pCat.includes('Mouse');
+      if (currentCategoryFilter === 'Çevre Birimleri') return pCat.includes('Çevre') || pCat.includes('Kulaklık') || pCat.includes('Mouse') || pCat.includes('Yazıcı') || pCat.includes('Takip');
       return pCat.includes(currentCategoryFilter);
     });
   }
@@ -312,7 +347,19 @@ function renderFilteredProductCards() {
       ` : ''}
 
       <div>
-        ${isDeal ? `
+        ${p.is_last_6m_lowest ? `
+          <div class="mb-3 flex items-center justify-between px-3 py-1.5 rounded-xl bg-gradient-to-r from-cyan-500/20 via-blue-500/15 to-indigo-500/20 border border-cyan-500/50 shadow-md">
+            <div class="flex items-center space-x-1.5">
+              <span class="text-sm">📉</span>
+              <span class="text-xs font-black text-cyan-300 tracking-wide">
+                SON 6 AYIN EN DÜŞÜK FİYATI
+              </span>
+            </div>
+            <span class="text-[10px] font-extrabold text-cyan-400 bg-cyan-950/80 px-2 py-0.5 rounded-md border border-cyan-500/30">
+              Akakçe Onaylı
+            </span>
+          </div>
+        ` : (isDeal ? `
           <div class="mb-3 flex items-center justify-between px-3 py-1.5 rounded-xl bg-gradient-to-r from-amber-500/20 via-orange-500/15 to-rose-500/20 border border-amber-500/50 shadow-md">
             <div class="flex items-center space-x-1.5">
               <span class="text-sm">🔥</span>
@@ -324,7 +371,7 @@ function renderFilteredProductCards() {
               Ortalama Altı
             </span>
           </div>
-        ` : ''}
+        ` : '')}
 
         <!-- Kart Üst Rozetler ve Aktiflik (Görseli Asla Örtmez) -->
         <div class="flex items-center justify-between mb-2.5 px-0.5">

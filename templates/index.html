@@ -187,11 +187,27 @@
       <div class="flex flex-wrap items-center gap-2 mb-4" id="categoryFilterContainer">
         <button onclick="filterProductsByCategory('all')" id="catBtn_all" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-emerald-600 text-white shadow-sm transition flex items-center space-x-1.5">
           <span>Tüm Ürünler</span>
-          <span id="catCount_all" class="px-1.5 py-0.5 rounded-full bg-white/20 text-[10px]">44</span>
+          <span id="catCount_all" class="px-1.5 py-0.5 rounded-full bg-white/20 text-[10px]">76</span>
+        </button>
+        <button onclick="filterProductsByCategory('last_6m')" id="catBtn_last_6m" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-indigo-500/20 hover:from-cyan-500/30 hover:to-indigo-500/30 text-cyan-300 border border-cyan-500/40 transition shadow-sm flex items-center space-x-1.5">
+          <span>📉 Son 6 Ayın En Düşükleri</span>
+          <span id="catCount_last_6m" class="px-1.5 py-0.5 rounded-full bg-cyan-500/30 text-[10px] font-black">32</span>
         </button>
         <button onclick="filterProductsByCategory('deals_20')" id="catBtn_deals" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-gradient-to-r from-amber-500/20 via-orange-500/20 to-rose-500/20 hover:from-amber-500/30 hover:to-rose-500/30 text-amber-300 border border-amber-500/40 transition shadow-sm flex items-center space-x-1.5">
           <span>🔥 %20+ İndirimdekiler</span>
           <span id="catCount_deals" class="px-1.5 py-0.5 rounded-full bg-amber-500/30 text-[10px] font-black">-</span>
+        </button>
+        <button onclick="filterProductsByCategory('Monitör & Ekran')" id="catBtn_MON" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition flex items-center space-x-1.5">
+          <span>🖥️ Monitör & Ekran</span>
+          <span id="catCount_MON" class="px-1.5 py-0.5 rounded-full bg-slate-700 text-[10px]">4</span>
+        </button>
+        <button onclick="filterProductsByCategory('Klima & Isıtma')" id="catBtn_CLIMA" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition flex items-center space-x-1.5">
+          <span>❄️ Klima & Isıtma</span>
+          <span id="catCount_CLIMA" class="px-1.5 py-0.5 rounded-full bg-slate-700 text-[10px]">7</span>
+        </button>
+        <button onclick="filterProductsByCategory('Beyaz Eşya & Ev Aletleri')" id="catBtn_HOME" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition flex items-center space-x-1.5">
+          <span>🏠 Beyaz Eşya & Ev</span>
+          <span id="catCount_HOME" class="px-1.5 py-0.5 rounded-full bg-slate-700 text-[10px]">8</span>
         </button>
         <button onclick="filterProductsByCategory('SSD & Depolama')" id="catBtn_SSD" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition flex items-center space-x-1.5">
           <span>💾 SSD & Depolama</span>
@@ -207,15 +223,23 @@
         </button>
         <button onclick="filterProductsByCategory('Bilgisayar & Laptop')" id="catBtn_PC" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition flex items-center space-x-1.5">
           <span>💻 Bilgisayar & Laptop</span>
-          <span id="catCount_PC" class="px-1.5 py-0.5 rounded-full bg-slate-700 text-[10px]">3</span>
+          <span id="catCount_PC" class="px-1.5 py-0.5 rounded-full bg-slate-700 text-[10px]">4</span>
+        </button>
+        <button onclick="filterProductsByCategory('Saat & Aksesuar')" id="catBtn_WATCH" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition flex items-center space-x-1.5">
+          <span>⌚ Saat & Aksesuar</span>
+          <span id="catCount_WATCH" class="px-1.5 py-0.5 rounded-full bg-slate-700 text-[10px]">3</span>
+        </button>
+        <button onclick="filterProductsByCategory('Kişisel Bakım & Sağlık')" id="catBtn_CARE" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition flex items-center space-x-1.5">
+          <span>✨ Kişisel Bakım</span>
+          <span id="catCount_CARE" class="px-1.5 py-0.5 rounded-full bg-slate-700 text-[10px]">2</span>
+        </button>
+        <button onclick="filterProductsByCategory('Çevre Birimleri')" id="catBtn_ACC" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition flex items-center space-x-1.5">
+          <span>🎧 Çevre Birimleri</span>
+          <span id="catCount_ACC" class="px-1.5 py-0.5 rounded-full bg-slate-700 text-[10px]">5</span>
         </button>
         <button onclick="filterProductsByCategory('İşlemci & Anakart')" id="catBtn_CPU" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition flex items-center space-x-1.5">
           <span>⚡ İşlemci & Anakart</span>
           <span id="catCount_CPU" class="px-1.5 py-0.5 rounded-full bg-slate-700 text-[10px]">2</span>
-        </button>
-        <button onclick="filterProductsByCategory('Çevre Birimleri')" id="catBtn_ACC" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition flex items-center space-x-1.5">
-          <span>🎧 Çevre Birimleri</span>
-          <span id="catCount_ACC" class="px-1.5 py-0.5 rounded-full bg-slate-700 text-[10px]">2</span>
         </button>
         <button onclick="filterProductsByCategory('Oyuncak & Hobi')" id="catBtn_TOY" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition flex items-center space-x-1.5">
           <span>🧸 Oyuncak & Hobi</span>
@@ -223,7 +247,7 @@
         </button>
         <button onclick="filterProductsByCategory('Bisiklet & Spor')" id="catBtn_BIKE" class="category-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition flex items-center space-x-1.5">
           <span>🚲 Bisiklet & Spor</span>
-          <span id="catCount_BIKE" class="px-1.5 py-0.5 rounded-full bg-slate-700 text-[10px]">3</span>
+          <span id="catCount_BIKE" class="px-1.5 py-0.5 rounded-full bg-slate-700 text-[10px]">4</span>
         </button>
       </div>
 
@@ -708,7 +732,7 @@
     </div>
   </footer>
 
-  <script src="/static/app.js?v=2.8.2"></script>
+  <script src="/static/app.js?v=2.9.0"></script>
   <script>
     // Lucide ikonlarını başlat
     lucide.createIcons();

@@ -98,6 +98,7 @@ function updateCategoryCounts() {
   const countPC = allProductsList.filter(p => (p.category || '').includes('Bilgisayar') || (p.category || '').includes('Laptop')).length;
   const countSSD = allProductsList.filter(p => (p.category || '').includes('SSD') || (p.category || '').includes('Depolama')).length;
   const countCPU = allProductsList.filter(p => (p.category || '').includes('İşlemci') || (p.category || '').includes('Anakart')).length;
+  const countCABLE = allProductsList.filter(p => (p.category || '').includes('Kablo') || (p.category || '').includes('Dönüştürücü') || (p.category || '').includes('HDMI')).length;
   const countACC = allProductsList.filter(p => (p.category || '').includes('Çevre') || (p.category || '').includes('Kulaklık') || (p.category || '').includes('Mouse')).length;
 
   const setT = (id, val) => { const el = document.getElementById(id); if (el) el.innerText = val; };
@@ -109,6 +110,7 @@ function updateCategoryCounts() {
   setT('catCount_PC', countPC);
   setT('catCount_SSD', countSSD);
   setT('catCount_CPU', countCPU);
+  setT('catCount_CABLE', countCABLE);
   setT('catCount_ACC', countACC);
 }
 
@@ -124,6 +126,7 @@ function filterProductsByCategory(category) {
     'Bilgisayar & Laptop': 'catBtn_PC',
     'SSD & Depolama': 'catBtn_SSD',
     'İşlemci & Anakart': 'catBtn_CPU',
+    'Kablo & Dönüştürücü': 'catBtn_CABLE',
     'Çevre Birimleri': 'catBtn_ACC'
   };
   
@@ -155,6 +158,7 @@ function populateChartDropdown(products) {
   
   const categoryConfigs = [
     { label: '🔥 %20+ İndirim Fırsatları', filter: p => p.is_featured_deal || (p.discount_percent && p.discount_percent >= 20) },
+    { label: '🔌 Kablo & Dönüştürücü', filter: p => (p.category || '').includes('Kablo') || (p.category || '').includes('Dönüştürücü') || (p.category || '').includes('HDMI') },
     { label: '🧸 Oyuncak & Hobi', filter: p => (p.category || '').includes('Oyuncak') || (p.category || '').includes('Hobi') },
     { label: '🚲 Bisiklet & Spor', filter: p => (p.category || '').includes('Bisiklet') || (p.category || '').includes('Spor') },
     { label: '⚡ RAM & Bellek', filter: p => (p.category || '').includes('RAM') || (p.category || '').includes('Bellek') },
@@ -173,7 +177,7 @@ function populateChartDropdown(products) {
         const opt = document.createElement('option');
         opt.value = p.id;
         const dealPrefix = (p.is_featured_deal || (p.discount_percent >= 20)) ? `[-%${Math.round(p.discount_percent)} Fırsat] ` : '';
-        opt.text = `${dealPrefix}${p.name} (${p.capacity || 'Standart'})`;
+        opt.textContent = `${dealPrefix}${p.name} - ${p.price_str || (p.price ? p.price + ' TL' : '')}`;
         group.appendChild(opt);
       });
       chartSelect.appendChild(group);
@@ -191,6 +195,7 @@ function renderFilteredProductCards() {
   } else if (currentCategoryFilter !== 'all') {
     products = allProductsList.filter(p => {
       const pCat = p.category || '';
+      if (currentCategoryFilter === 'Kablo & Dönüştürücü') return pCat.includes('Kablo') || pCat.includes('Dönüştürücü') || pCat.includes('HDMI');
       if (currentCategoryFilter === 'Oyuncak & Hobi') return pCat.includes('Oyuncak') || pCat.includes('Hobi');
       if (currentCategoryFilter === 'Bisiklet & Spor') return pCat.includes('Bisiklet') || pCat.includes('Spor');
       if (currentCategoryFilter === 'RAM & Bellek') return pCat.includes('RAM') || pCat.includes('Bellek');

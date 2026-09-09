@@ -219,6 +219,106 @@
       "threshold_price": 50000.0,
       "is_active": true,
       "image_url": "https://cdn.akakce.com/z/apple/macbook-air-m2-16-gb-256-gb-ssd-13-6-notebook.jpg"
+    },
+    {
+      "id": "s-link-slx-hd4k015-1-5m",
+      "name": "S-link SLX-HD4K015 1.5 m 4K v2.0 HDMI Kablo",
+      "category": "Kablo & Dönüştürücü",
+      "capacity": "1.5 Metre (4K 60Hz)",
+      "url": "https://www.akakce.com/hdmi-kablo/en-ucuz-s-link-slx-hd4k015-1-5-m-v2-0-4k-fiyati,420901192.html",
+      "threshold_price": 140.0,
+      "is_active": true,
+      "image_url": "/static/product_imgs/s-link-slx-hd4k015-1-5m.jpg"
+    },
+    {
+      "id": "s-link-slx-hd4k03-3m",
+      "name": "S-link SLX-HD4K03 3 m 4K v2.0 HDMI Kablo",
+      "category": "Kablo & Dönüştürücü",
+      "capacity": "3 Metre (4K 60Hz)",
+      "url": "https://www.akakce.com/hdmi-kablo/en-ucuz-s-link-slx-hd4k03-3-m-v2-0-4k-fiyati,420901014.html",
+      "threshold_price": 160.0,
+      "is_active": true,
+      "image_url": "/static/product_imgs/s-link-slx-hd4k03-3m.jpg"
+    },
+    {
+      "id": "s-link-slx-hd4k05-5m",
+      "name": "S-link SLX-HD4K05 5 m 4K v2.0 HDMI Kablo",
+      "category": "Kablo & Dönüştürücü",
+      "capacity": "5 Metre (4K 60Hz)",
+      "url": "https://www.akakce.com/hdmi-kablo/en-ucuz-s-link-slx-hd4k05-5-m-v2-0-4k-fiyati,421764017.html",
+      "threshold_price": 200.0,
+      "is_active": true,
+      "image_url": "/static/product_imgs/s-link-slx-hd4k05-5m.jpg"
+    },
+    {
+      "id": "s-link-slx-hd4k10-10m",
+      "name": "S-link SLX-HD4K10 10 m 4K v2.0 HDMI Kablo",
+      "category": "Kablo & Dönüştürücü",
+      "capacity": "10 Metre (4K 60Hz)",
+      "url": "https://www.akakce.com/hdmi-kablo/en-ucuz-s-link-slx-hd4k10-10-m-v2-0-4k-fiyati,420901240.html",
+      "threshold_price": 450.0,
+      "is_active": true,
+      "image_url": "/static/product_imgs/s-link-slx-hd4k10-10m.jpg"
+    },
+    {
+      "id": "s-link-slx-hd4k20-20m",
+      "name": "S-link SLX-HD4K20 20 m 4K v2.0 HDMI Kablo",
+      "category": "Kablo & Dönüştürücü",
+      "capacity": "20 Metre (4K 60Hz)",
+      "url": "https://www.akakce.com/hdmi-kablo/en-ucuz-s-link-slx-hd4k20-20-m-v2-0-4k-fiyati,444921684.html",
+      "threshold_price": 800.0,
+      "is_active": true,
+      "image_url": "/static/product_imgs/s-link-slx-hd4k20-20m.jpg"
+    },
+    {
+      "id": "s-link-sl-hm8k15-8k-1-5m",
+      "name": "S-link SL-HM8K15 1.5 m 8K@60Hz HDMI 2.1 Kablo",
+      "category": "Kablo & Dönüştürücü",
+      "capacity": "1.5 Metre (8K 60Hz / 4K 120Hz)",
+      "url": "https://www.akakce.com/hdmi-kablo/en-ucuz-s-link-sl-hm8k15-hdmi-to-hdmi-1-5m-v2-1-8k60-hz-4k-120hz-kablo-fiyati,1566697589.html",
+      "threshold_price": 350.0,
+      "is_active": true,
+      "image_url": "/static/product_imgs/s-link-sl-hm8k15-8k-1-5m.jpg"
+    },
+    {
+      "id": "s-link-sl-hm8k03-8k-3m",
+      "name": "S-link SL-HM8K03 3 m 8K@60Hz HDMI 2.1 Kablo",
+      "category": "Kablo & Dönüştürücü",
+      "capacity": "3 Metre (8K 60Hz / 4K 120Hz)",
+      "url": "https://www.akakce.com/hdmi-kablo/en-ucuz-s-link-sl-hm8k03-hdmi-to-hdmi-3m-v2-1-8k60-hz-4k-120hz-kablo-fiyati,1566697595.html",
+      "threshold_price": 450.0,
+      "is_active": true,
+      "image_url": "/static/product_imgs/s-link-sl-hm8k03-8k-3m.jpg"
+    },
+    {
+      "id": "s-link-slx-915-micro-hdmi-1m",
+      "name": "S-link SLX-915 1 m Micro HDMI to HDMI Kablo",
+      "category": "Kablo & Dönüştürücü",
+      "capacity": "1 Metre (Micro HDMI)",
+      "url": "https://www.akakce.com/hdmi-kablo/en-ucuz-s-link-slx-915-1-m-micro-hdmi-to-fiyati,1080225415.html",
+      "threshold_price": 300.0,
+      "is_active": true,
+      "image_url": "/static/product_imgs/s-link-slx-915-micro-hdmi-1m.jpg"
+    },
+    {
+      "id": "s-link-sl-mh25-mini-hdmi-1-5m",
+      "name": "S-link SL-MH25 1.5 m Mini HDMI to HDMI Kablo",
+      "category": "Kablo & Dönüştürücü",
+      "capacity": "1.5 Metre (Mini HDMI)",
+      "url": "https://www.akakce.com/hdmi-kablo/en-ucuz-s-link-sl-mh25-1-5-m-mini-hdmi-m-m-kablo-fiyati,4258450.html",
+      "threshold_price": 280.0,
+      "is_active": true,
+      "image_url": "/static/product_imgs/s-link-sl-mh25-mini-hdmi-1-5m.jpg"
+    },
+    {
+      "id": "s-link-slx-283-altin-uc-3m",
+      "name": "S-link SLX-283 3 m 24K Altın Uçlu Örgülü HDMI Kablo",
+      "category": "Kablo & Dönüştürücü",
+      "capacity": "3 Metre (Örgülü Zırhlı)",
+      "url": "https://www.akakce.com/hdmi-kablo/en-ucuz-s-link-slx-283-hdmi-to-hdmi-3-m-altin-uclu-24k-kablo-fiyati,859329452.html",
+      "threshold_price": 500.0,
+      "is_active": true,
+      "image_url": "/static/product_imgs/s-link-slx-283-altin-uc-3m.jpg"
     }
   ],
   "schedule": {
